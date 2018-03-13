@@ -1,0 +1,19 @@
+<perfect-scrollbar style="max-height: 100%;" [config]="config">
+  <div class="message-component" *ngFor="let item of users" (click)="selectUser(item)">
+    <div class="profit">
+      <img *ngIf="item._img" [src]="item._img" alt="" class="img-profit">
+      <img *ngIf="!item._img" src="../assets/user.png" alt="" class="img-profit">
+    </div>
+    <div class="name">
+      <strong>{{item._name}}</strong>
+      <p>zxcvbnm</p>
+    </div>
+    <div class="time">
+      <p>12:30pm</p>
+    </div>
+  </div>
+  <div class="search" *ngIf="!users">
+      <p>Tìm Kiếm Mọi Người</p>
+      <img src="../assets/magnifier.png" alt="">
+  </div>
+</perfect-scrollbar>

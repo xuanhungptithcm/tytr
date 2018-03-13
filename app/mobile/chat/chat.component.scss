@@ -1,0 +1,120 @@
+.chat-component{
+    width: 100%;
+    height: 100%;
+    .top-chat{
+        width: 100%;
+        height: 10%;
+        border-bottom: 1px solid gray;
+        text-align: center;
+        .back{
+            position: absolute;
+            top: calc((10% - 40px)/2);
+            left: 10px;
+            display: flex;
+            b{
+                margin: 10px;
+            }
+        }
+        .add{
+            position: absolute;
+            top: calc((10% - 35px)/2);
+            right: 20px;
+            .request{
+                border: 1px solid gray;
+                font-size: 13px;
+                padding: 5px;
+                margin: 5px;
+                border-radius: 10px;
+                width: 95px;
+                cursor: pointer;
+            }
+            .request :hover{
+                color: rgb(9, 44, 241);
+            }
+        }
+        strong{
+            font-size: 26px;
+        }
+        p{
+            font-size: 20px;
+            margin: 10px;
+            color: rgb(153, 236, 29);
+        }
+    }
+    .content-chat{
+        width: 100%;
+        height: 80%;
+        border-bottom: 1px solid gray;
+        .message{
+            width: 100%;
+            .message-friend{
+                color: white;
+                width: 49%;
+                background-color: rgb(30, 120, 255);
+                margin: 10px 10px 5px 10px;
+                padding: 10px;
+                border-radius: 10px;
+                float: left;
+            }
+            .message-mine{
+                margin: 10px 10px 5px 10px;
+                padding: 10px;
+                float: right;
+                color: white;
+                width: 49.1%;
+                align-items: flex-end;
+                background-color: rgb(30, 120, 255);
+                border-radius: 10px;
+            }
+        }
+    }
+    .footer-chat{
+        width: 100%;
+        height: 10%;
+        display: flex;
+        .text{
+            flex: 10;
+            input{
+                width: 97%;
+                height: 60%;
+                margin-top: 2.3%;
+                padding: 0;
+                margin-left: 2%;
+                font-size: 22px;
+                border: none;
+                outline: none;
+            }
+        }
+        .send{
+            flex: 1;
+            text-align: center;
+            img{
+                width: 45%;
+                margin-top: 25%;
+                cursor: pointer;
+            }
+        }
+        .menu{
+            flex: 6;
+            display: flex;
+            border-left: 1px solid wheat;
+            .img{
+                flex: 1;
+                border-right: 1px solid wheat;
+                text-align: center;
+                padding-top: 5%;
+                img{
+                    width: 30%;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+.hideInput{
+    opacity: 0;
+    z-index: -999;
+    position: absolute;
+    top:0;
+    left: 0;
+}

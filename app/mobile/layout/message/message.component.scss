@@ -1,0 +1,49 @@
+.message-component{
+    display: flex;
+    height: 70px;
+    margin: 10px 120px;
+    border: 1px solid rgba(128, 128, 128, 0.315);
+    border-radius: 40px;
+    cursor: pointer;
+    .profit{
+        flex: 1;
+        .img-profit{
+            width: 50px;
+            height: 50px;
+            margin: 10px 0 10px calc((100% - 80px));
+            border-radius: 100%;
+        }
+    }
+    .name{
+        flex: 6;
+        p{
+            line-height: 35px;
+        }
+        strong{
+            line-height: 35px;
+            font-size: 19px;
+        }
+    }
+    .time{
+        flex: 1;
+        p{
+            line-height: 70px;
+        }
+    }
+}
+
+.search {
+    width: 100%;
+    text-align: center;
+    p{
+        font-size: 30px;
+        opacity: 0.5;
+        top: 180px;
+        left: 41.5%;
+        position: absolute;
+    }
+    img{
+        opacity: 0.5;
+        margin-top: 256px;
+    }
+}

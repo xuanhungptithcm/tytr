@@ -1,0 +1,40 @@
+<div class="search-component">
+  <div class="logo">
+    <label for="upload-photo">
+      <img *ngIf="Iuser._img" [src]="Iuser._img" alt="" class="img">
+      <img *ngIf="!Iuser._img" src="../assets/user.png" alt="" class="img">
+    </label>
+    <input type="file" name="photo" id="upload-photo" (change)="changeProfit($event)" />
+  </div>
+  <div class="search">
+    <input type="search" [(ngModel)]="keySearch"
+      (keyup)="searchHandler($event)"
+      (search)="searchHandler($event)"
+      class="input-search"
+      placeholder="Search..."
+    >
+    <img src="../assets/search.png" alt="" class="logo-search">
+  </div>
+  <div class="setting">
+    <img src="../assets/settings.png" alt="" class="setting-icon" (click)="closeRole()">
+    <div class="infomation" *ngIf="role === true">
+      <div class="role">
+        <p>Change Password</p>
+      </div>
+      <div class="role" (click)="logout()">
+        <p>Log Out</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="role">
+  <div class="message" (click)="changeRole(1)" [ngClass]="{change: changeClass === 1}">
+    <p>Tin Nhắn</p>
+  </div>
+  <div class="activity" (click)="changeRole(2)" [ngClass]="{change: changeClass === 2}">
+    <p>Hoạt Động (1)</p>
+  </div>
+  <div class="notication" (click)="changeRole(3)" [ngClass]="{change: changeClass === 3}">
+    <p *ngIf="notication">Kết Bạn ({{notication.length}})</p>
+  </div>
+</div>

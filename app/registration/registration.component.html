@@ -1,0 +1,27 @@
+<div class="newacount">
+  <div class="name">
+    <h1>CHAT ROOM</h1>
+  </div>
+  <div class="table">
+    <div class="table-content">
+      <div class="text">
+        <h2>REGISTRATION</h2>
+      </div>
+      <div class="acount">
+        <div class="acountchild">
+          <form [formGroup]="registerGroup" (ngSubmit)="doRegister()">
+            <div class="acount-ip">
+              <input type="text" placeholder="Full name" [formControl]="name">
+              <input type="email" placeholder="Email" [formControl]="email">
+              <input type="password" placeholder="password" [formControl]="password">
+              <input type="password" placeholder="res-password" [formControl]="repassword">
+            </div>
+            <input class="smlogin" type="submit" value="REGISTER">
+            <input class="smlogin" type="reset" value="CANCLE" (click)="returnLogin()">
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+  </div>

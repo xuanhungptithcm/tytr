@@ -1,0 +1,87 @@
+.search-component{
+    display: flex;
+    height: 50%;
+}
+.logo{
+    flex: 1;
+    .img{
+        width: 64px;
+        height: 64px;
+        border-radius: 100%;
+        margin: calc((66.19px - 64px)/2) calc((124.19px - 64px)/2); 
+        cursor: pointer;
+    }
+}
+.search{
+    flex: 10;
+    display: flex;
+    text-align: center;
+    .input-search{
+        width: 95%;
+        height: 32px;
+        margin: calc((66.19px - 32px)/2) 0;
+        border-radius: 10px;
+    }
+    .logo-search{
+        width: 32px;
+        height: 32px;
+        margin: calc((66.19px - 32px)/2) 5px;
+        cursor: pointer;
+    }
+}
+.setting{
+    flex: 1;
+    margin: calc((66.19px - 32px)/2) 0 calc((66.19px - 32px)/2) calc((112.16px - 20px)/2);
+    position: relative;
+    img{
+        cursor: pointer;
+    }
+    .infomation{
+        position: absolute;
+        top: 39.19px;
+        left: -20px;
+        border: 0px 1px 1px 1px solid gray;
+        box-shadow: 2px 2px 2px 2px gray;
+        .role{
+            width: 120px;
+            height: 25px;
+            border-top: 1px solid gray;
+            text-align: center;
+            p{
+                font-size: 13px;
+                margin: 5px;
+                cursor: pointer;
+            }
+            p:hover {
+                color: blue;
+            }
+        }
+    }
+}
+.role{
+    display: flex;
+    .message{
+        flex: 1;
+        text-align: center;
+        cursor: pointer;
+    }
+    .activity{
+        flex: 1;
+        text-align: center;
+        cursor: pointer;
+    }
+    .notication{
+        flex: 1;
+        text-align: center;
+        cursor: pointer;
+    }
+    .change{
+        border-bottom: 1px solid blue;
+        color: blue;
+    }
+}
+#upload-photo {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+ }

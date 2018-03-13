@@ -1,0 +1,47 @@
+<div class="login">
+    <div class="name">
+        <h1>CHAT ROOM</h1>
+    </div>
+    <div class="table">
+        <div class="table-content">
+            <div class="text">
+                <h2>Đăng nhập</h2>
+            </div>
+            <div class="typesign">
+                <div class="fb">
+                    <div class="fbbt">
+                        <img src="./assets/facebook.png" alt="">
+                        <p>FACEBOOK</p>
+                    </div>
+
+                </div>
+                <div class="gm">
+                    <div class="gmbt">
+                        <img src="./assets/google.png" alt="">
+                        <p>GOOGLE</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="hoac">
+                <p>Hoặc</p>
+            </div>
+            <div class="acount">
+                <div class="acountchild">
+                    <form [formGroup]="loginForm" (ngSubmit)="login()">
+                        <input type="text" placeholder="Tài khoản" [formControl]="email">
+                        <input type="password" placeholder="Mật khẩu" [formControl]="pass">
+                        <input id="smlogin" type="submit" value="LOGIN" >
+                    </form>
+                </div>
+            </div>
+            <div class="regis" routerLink="/register">
+                <b>Bạn chưa có tài khoản:</b>
+                <p>Đăng kí ngay</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <img *ngIf="flag" src="../assets/Interwind-1s-200px.gif" alt="" class="loading">

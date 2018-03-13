@@ -1,0 +1,16 @@
+<perfect-scrollbar *ngIf="notication" style="max-height: 100%;" [config]="config">
+  <div class="group-component" *ngFor="let item of notication">
+    <div class="profit">
+      <img [src]="item._img" alt="" class="img-profit">
+    </div>
+    <div class="name">
+      <strong>{{item._name}}</strong>
+    </div>
+    <div class="cancle" (click)="cancleAccept(item._id)">
+      <strong>CANCLE</strong>
+    </div>
+    <div class="accept" (click)="accept(item._id)">
+      <strong>ACCEPT</strong>
+    </div>
+  </div>
+</perfect-scrollbar>

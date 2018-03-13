@@ -1,0 +1,52 @@
+.group-component{
+    display: flex;
+    height: 70px;
+    margin: 10px 120px;
+    border: 1px solid rgba(128, 128, 128, 0.315);
+    border-radius: 40px;
+    cursor: pointer;
+    .profit{
+        flex: 1;
+        .img-profit{
+            width: 50px;
+            height: 50px;
+            margin: 10px 0 10px calc((100% - 80px));
+            border-radius: 100%;
+        }
+    }
+    .name{
+        flex: 6;
+        p{
+            line-height: 35px;
+        }
+        strong{
+            line-height: 70px;
+            font-size: 19px;
+        }
+    }
+    .cancle{
+        flex: 1;
+        background-color: red;
+        text-align: center;
+        strong{
+            line-height: 70px;
+            color: white;
+        }
+    }
+    .cancle:hover{
+        background-color: rgba(255, 0, 0, 0.336);
+    }
+    .accept{
+        flex: 1;
+        background-color: green;
+        border-radius: 0 40px 40px 0;
+        text-align: center;
+        strong{
+            line-height: 70px;
+            color: white;
+        }
+    }
+    .accept:hover{
+        background-color: rgba(0, 128, 0, 0.418);
+    }
+}

@@ -1,0 +1,60 @@
+<div *ngIf="yourshelf" class="chat-component">
+  <div class="top-chat">
+    <a [routerLink]="['/layout/message']">
+      <div class="back">
+        <img src="./assets/left-arrow.png" alt="">
+        <b>BACK</b>
+      </div>
+    </a>
+    <strong>{{nameUser}}</strong>
+    <p>online</p>
+    <div class="add">
+      <div *ngIf="makeFr === 0" class="request" (click)="makeFriend()">
+        <span>Add Friend</span>
+      </div>
+      <div *ngIf="makeFr === 1" class="request" (click)="cancleFriend()">
+        <span>Cancle Friend</span>
+      </div>
+      <div *ngIf="makeFr === 2" class="request">
+        <span>Friend</span>
+      </div>
+    </div>
+  </div>
+  <div class="content-chat">
+    <div class="message">
+      <div *ngIf="messagefriend" class="message-friend">
+        <p>{{messagefriend}}</p>
+      </div>
+      <div *ngIf="messageMe" class="message-mine">
+        <p>{{messageMe}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-chat">
+    <div class="menu">
+      <div class="img">
+        <img src="./assets/smiling-emoticon-square-face.png" alt="">
+      </div>
+      <div class="img">
+        <img src="./assets/picture.png" alt="">
+      </div>
+      <div class="img">
+        <img src="./assets/photo-camera.png" alt="">
+      </div>
+      <div class="img">
+        <img src="./assets/paperclip.png" alt="">
+      </div>
+      <div class="img">
+        <img src="./assets/add-user.png" alt="">
+      </div>
+    </div>
+    <form class="text" (submit)="sendMessage()">
+      <input *ngIf="makeFr === 2" type="text" placeholder="Nhập tin nhắn..." [formControl]="message">
+      <input *ngIf="makeFr !== 2" type="text" placeholder="Kết bạn nhé..." disabled="disabled">
+      <input class="hideInput" type="submit" name="" id="">
+    </form>
+    <div class="send">
+      <img src="./assets/sent-mail.png" alt="">
+    </div>
+  </div>
+</div>
